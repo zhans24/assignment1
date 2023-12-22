@@ -1,17 +1,26 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import figure.Shape;
+import figure.Point;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] args) throws FileNotFoundException {
+        File points=new File("C:\\Users\\USER\\IdeaProjects\\assignment\\src\\source");
+        Scanner read=new Scanner(points);
+        Shape shape=new Shape();
+        while (read.hasNext()){
+            double x= read.nextDouble();
+            double y=read.nextDouble();
+            Point point=new Point(x,y);
+            shape.addPoint(point);
+       }
+        System.out.println(shape.getPerimeter());
+        System.out.println(shape.getAverageSide());
+        System.out.println(shape.getLongestSide());
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
     }
 }
