@@ -16,6 +16,7 @@ public class Main {
             double y=read.nextDouble();
             Point point=new Point(x,y);
             shape.addPoint(point);
+            System.out.println(point);
        }
         System.out.println(shape.getPerimeter());
         System.out.println(shape.getAverageSide());
