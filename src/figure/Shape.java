@@ -2,7 +2,6 @@ package figure;
 
 import java.util.ArrayList;
 
-//The Shape class should be able to calculate the perimeter of shape, find the longest and average sides of the shape.
 public class Shape {
     static ArrayList<Point> points=new ArrayList<>();
     public void addPoint(Point xy){
